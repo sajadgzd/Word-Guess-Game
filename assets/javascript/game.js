@@ -36,7 +36,6 @@ function start() {
     winsText.innerHTML = wins;
     lossesText.innerHTML = losses;
 
-
 }
 
 function checkletter(userInput) {
@@ -59,9 +58,12 @@ function checkletter(userInput) {
                     BlankSuccess[i] = userInput;
                 }
             }
+            currentWordText.innerHTML = BlankSuccess.join(" ");
         } else {
             --remainingGuess;
             alreadyGuessed.push(userInput);
+            alreadyGuessedText.innerHTML = alreadyGuessed;
+            remainingGuessText.innerHTML = remainingGuess;
         }
     }
 }
@@ -84,9 +86,6 @@ document.onkeyup = function() {
 
     userInput = String.fromCharCode(event.keyCode).toUpperCase();
     checkletter(userInput);
-    alreadyGuessedText.innerHTML = alreadyGuessed;
-    remainingGuessText.innerHTML = remainingGuess;
-    currentWordText.innerHTML = BlankSuccess.join(" ");
 
     roundFinish();
 
