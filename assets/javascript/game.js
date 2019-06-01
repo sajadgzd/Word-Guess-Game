@@ -31,20 +31,29 @@ function start() {
 }
 
 function checkletter(userInput) {
-    var isLetterinChoice = false;
-    for (let i = 0; i < numBlanks; i++) {
-        if (userInput === computerChoice[i]) {
-            isLetterinChoice = true;
+    var isLetterinAlreadyGuessed = false;
+    for (let i = 0; i < alreadyGuessed.length; i++) {
+        if (userInput == alreadyGuessed[i]) {
+            isLetterinAlreadyGuessed = true;
         }
     }
-    if (isLetterinChoice) {
+    if (!isLetterinAlreadyGuessed) {
+        var isLetterinChoice = false;
         for (let i = 0; i < numBlanks; i++) {
             if (userInput === computerChoice[i]) {
-                BlankSuccess[i] = userInput;
+                isLetterinChoice = true;
             }
         }
-    } else {
-        --remainingGuess;
+        if (isLetterinChoice) {
+            for (let i = 0; i < numBlanks; i++) {
+                if (userInput === computerChoice[i]) {
+                    BlankSuccess[i] = userInput;
+                }
+            }
+        } else {
+            --remainingGuess;
+            alreadyGuessed.push(userInput);
+        }
     }
 }
 
@@ -59,7 +68,6 @@ document.onkeyup = function() {
     userInput = String.fromCharCode(event.keyCode).toUpperCase();
     console.log(userInput);
     checkletter(userInput);
-    alreadyGuessed.push(userInput);
     alreadyGuessedText.innerHTML = alreadyGuessed;
     remainingGuessText.innerHTML = remainingGuess;
 
