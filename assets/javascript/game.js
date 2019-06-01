@@ -25,11 +25,10 @@ function start() {
 
 
     for (let i = 0; i < lettersInComputerChoice.length; i++) {
-        BlankSuccess[i].push("_");
-
+        BlankSuccess.push("_");
     }
 
-    currentWordText.innerHTML = BlankSuccess;
+    currentWordText.innerHTML = BlankSuccess.join(" ");
 }
 
 function checkletter(userInput) {
