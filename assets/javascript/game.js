@@ -23,11 +23,11 @@ function start() {
     alreadyGuessed = [];
     numBlanks = 0;
 
-
+    alreadyGuessedText.innerHTML = alreadyGuessed;
     computerChoice = choices[Math.floor(Math.random() * choices.length)];
     lettersInComputerChoice = computerChoice.split('');
     numBlanks = lettersInComputerChoice.length;
-    remainingGuess = lettersInComputerChoice.length;
+    remainingGuess = lettersInComputerChoice.length + 3;
 
     for (let i = 0; i < lettersInComputerChoice.length; i++) {
         BlankSuccess.push("_");
