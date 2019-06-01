@@ -15,8 +15,9 @@ var currentWordText = document.getElementById("currentWord");
 var remainingGuessText = document.getElementById("remainingGuess");
 var alreadyGuessedText = document.getElementById("alreadyGuessed");
 var correctAnswerText = document.getElementById("answer");
+var countryImage = document.getElementById("country");
 
-var choices = ["IRAN", "USA", "BRAZIL", "TURKEY", "TAIWAN", "BURKINAFASO", "SWITZERLAND", "ROMANIA", "SPAIN"];
+var choices = ["IRAN", "USA", "BRAZIL", "TURKEY", "TAIWAN", "BURKINAFASO", "SWITZERLAND", "ROMANIA", "SPAIN", "INDONESIA", "JAPAN", "KENYA", "GREECE", "TUNISIA", "MONGOLIA", "SENEGAL", "FINLAND"];
 
 function start() {
     BlankSuccess = [];
@@ -74,12 +75,120 @@ function roundFinish() {
         ++wins;
         winsText.innerHTML = wins;
         correctAnswerText.innerHTML = computerChoice.toString();
+        if (computerChoice.toString() === "IRAN") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg")
+        }
+        if (computerChoice.toString() === "USA") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg")
+        }
+        if (computerChoice.toString() === "BRAZIL") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg")
+        }
+        if (computerChoice.toString() === "TURKEY") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg")
+        }
+        if (computerChoice.toString() === "TAIWAN") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/7/72/Flag_of_the_Republic_of_China.svg")
+        }
+        if (computerChoice.toString() === "BURKINAFASO") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Burkina_Faso.svg")
+        }
+        if (computerChoice.toString() === "SWITZERLAND") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg")
+        }
+        if (computerChoice.toString() === "ROMANIA") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg")
+        }
+        if (computerChoice.toString() === "SPAIN") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg")
+        }
+        if (computerChoice.toString() === "INDONESIA") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg")
+        }
+        if (computerChoice.toString() === "JAPAN") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg")
+        }
+        if (computerChoice.toString() === "KENYA") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg")
+        }
+        if (computerChoice.toString() === "GREECE") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg")
+        }
+        if (computerChoice.toString() === "TUNISIA") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Tunisia.svg")
+        }
+        if (computerChoice.toString() === "MONGOLIA") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Mongolia.svg")
+        }
+        if (computerChoice.toString() === "SENEGAL") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg")
+        }
+        if (computerChoice.toString() === "FINLAND") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg")
+        }
+
         start();
 
     } else if (remainingGuess === 0) {
         ++losses;
         lossesText.innerHTML = losses;
         correctAnswerText.innerHTML = computerChoice.toString();
+        if (computerChoice.toString() === "IRAN") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg")
+        }
+
+        if (computerChoice.toString() === "USA") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg")
+        }
+        if (computerChoice.toString() === "BRAZIL") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg")
+        }
+        if (computerChoice.toString() === "TURKEY") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg")
+        }
+        if (computerChoice.toString() === "TAIWAN") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/7/72/Flag_of_the_Republic_of_China.svg")
+        }
+        if (computerChoice.toString() === "BURKINAFASO") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Burkina_Faso.svg")
+        }
+        if (computerChoice.toString() === "SWITZERLAND") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg")
+        }
+        if (computerChoice.toString() === "ROMANIA") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg")
+        }
+        if (computerChoice.toString() === "SPAIN") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg")
+        }
+        if (computerChoice.toString() === "INDONESIA") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg")
+        }
+        if (computerChoice.toString() === "JAPAN") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg")
+        }
+        if (computerChoice.toString() === "KENYA") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg")
+        }
+        if (computerChoice.toString() === "GREECE") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg")
+        }
+        if (computerChoice.toString() === "TUNISIA") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Tunisia.svg")
+        }
+        if (computerChoice.toString() === "MONGOLIA") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Mongolia.svg")
+        }
+        if (computerChoice.toString() === "SENEGAL") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg")
+        }
+        if (computerChoice.toString() === "FINLAND") {
+            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg")
+        }
+
+
+
+
         start();
 
     }
