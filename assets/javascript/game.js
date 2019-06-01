@@ -21,6 +21,15 @@ function start() {
     lettersInComputerChoice = computerChoice.split('');
     numBlanks = lettersInComputerChoice.length;
     remainingGuess = 12;
+
+
+
+    for (let i = 0; i < lettersInComputerChoice.length; i++) {
+        BlankSuccess[i].push("_");
+
+    }
+
+    currentWordText.innerHTML = BlankSuccess;
 }
 
 function checkletter(userInput) {
@@ -51,10 +60,12 @@ start();
 document.onkeyup = function() {
     userInput = String.fromCharCode(event.keyCode).toUpperCase();
     console.log(userInput);
-
+    checkletter(userInput);
     alreadyGuessed.push(userInput);
     alreadyGuessedText.innerHTML = alreadyGuessed;
     remainingGuessText.innerHTML = remainingGuess;
+
+    currentWordText.innerHTML = BlankSuccess.join(" ");
 
 
 }
