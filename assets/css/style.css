@@ -40,6 +40,10 @@ body {
     border: 2px;
     border-style: double;
     padding-bottom: 50px;
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+    background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+    border-radius: 25px;
 }
 
 @media screen and (max-width: 990px) {
