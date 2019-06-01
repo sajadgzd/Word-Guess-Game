@@ -27,12 +27,15 @@ function checkletter(userInput) {
     var isLetterinChoice = false;
     for (let i = 0; i < numBlanks; i++) {
         if (userInput === computerChoice[i]) {
-
-
+            isLetterinChoice = true;
         }
     }
     if (isLetterinChoice) {
-
+        for (let i = 0; i < numBlanks; i++) {
+            if (userInput === computerChoice[i]) {
+                BlankSuccess[i] = userInput;
+            }
+        }
     } else {
         --remainingGuess;
     }
@@ -53,7 +56,5 @@ document.onkeyup = function() {
     alreadyGuessedText.innerHTML = alreadyGuessed;
     remainingGuessText.innerHTML = remainingGuess;
 
-
-}
 
 }
