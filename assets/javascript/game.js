@@ -10,6 +10,7 @@ var losses = 0;
 var remainingGuess = 0;
 
 var winsText = document.getElementById("wins");
+var lossesText = document.getElementById("losses");
 var currentWordText = document.getElementById("currentWord");
 var remainingGuessText = document.getElementById("remainingGuess");
 var alreadyGuessedText = document.getElementById("alreadyGuessed");
@@ -17,15 +18,23 @@ var alreadyGuessedText = document.getElementById("alreadyGuessed");
 var choices = ["IRAN", "USA", "BRAZIL", "TURKEY", "TAIWAN", "BURKINAFASO", "SWITZERLAND", "ROMANIA", "SPAIN"];
 
 function start() {
+    BlankSuccess = [];
+    alreadyGuessed = [];
+    numBlanks = 0;
+
+
     computerChoice = choices[Math.floor(Math.random() * choices.length)];
     lettersInComputerChoice = computerChoice.split('');
     numBlanks = lettersInComputerChoice.length;
-    remainingGuess = 9;
+    remainingGuess = lettersInComputerChoice.length;
 
     for (let i = 0; i < lettersInComputerChoice.length; i++) {
         BlankSuccess.push("_");
     }
+    remainingGuessText.innerHTML = remainingGuess;
     currentWordText.innerHTML = BlankSuccess.join(" ");
+    winsText.innerHTML = wins;
+    lossesText.innerHTML = losses;
 
 
 }
@@ -58,20 +67,27 @@ function checkletter(userInput) {
 }
 
 function roundFinish() {
-
-
+    if (lettersInComputerChoice.toString() === BlankSuccess.toString()) {
+        ++wins;
+        winsText.innerHTML = wins;
+        start();
+    } else if (remainingGuess === 0) {
+        ++losses;
+        lossesText.innerHTML = losses;
+        start();
+    }
 }
 
 start();
 
 document.onkeyup = function() {
+
     userInput = String.fromCharCode(event.keyCode).toUpperCase();
-    console.log(userInput);
     checkletter(userInput);
     alreadyGuessedText.innerHTML = alreadyGuessed;
     remainingGuessText.innerHTML = remainingGuess;
-
     currentWordText.innerHTML = BlankSuccess.join(" ");
 
+    roundFinish();
 
 }
