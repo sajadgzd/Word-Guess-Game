@@ -14,7 +14,7 @@ var currentWordText = document.getElementById("currentWord");
 var remainingGuessText = document.getElementById("remainingGuess");
 var alreadyGuessedText = document.getElementById("alreadyGuessed");
 
-var choices = ["IRAN", "USA", "BRAZIL", "TURKEY", "TAIWAN", "BURKINA FASO", "SWITZERLAND", "ROMANIA", "SPAIN"];
+var choices = ["IRAN", "USA", "BRAZIL", "TURKEY", "TAIWAN", "BURKINAFASO", "SWITZERLAND", "ROMANIA", "SPAIN"];
 
 function start() {
     computerChoice = choices[Math.floor(Math.random() * choices.length)];
