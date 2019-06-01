@@ -20,15 +20,14 @@ function start() {
     computerChoice = choices[Math.floor(Math.random() * choices.length)];
     lettersInComputerChoice = computerChoice.split('');
     numBlanks = lettersInComputerChoice.length;
-    remainingGuess = 12;
-
-
+    remainingGuess = 9;
 
     for (let i = 0; i < lettersInComputerChoice.length; i++) {
         BlankSuccess.push("_");
     }
-
     currentWordText.innerHTML = BlankSuccess.join(" ");
+
+
 }
 
 function checkletter(userInput) {
