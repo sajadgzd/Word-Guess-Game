@@ -1,5 +1,8 @@
 body {
-    background-color: rgb(240, 235, 229);
+    /* background-color: rgb(34, 30, 30); */
+    margin-top: 10px;
+    background-image: url("../images/sky.jpg");
+    color: azure;
     font-family: 'Merriweather', serif;
 }
 
@@ -14,16 +17,45 @@ body {
 
 #header-img {
     border-radius: 10px;
+    width: 350px;
+    height: 200px;
 }
 
 #country {
-    height: 80%;
-    width: 70%;
+    width: 350px;
+    height: 250px;
 }
 
-@media screen and (max-width: 768px) {
+.start {
+    margin: 20px 0;
+}
+
+.scores {
+    margin: 10px 0;
+    border: 2px;
+    border-style: double;
+}
+
+.col-6 {
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 990px) {
     #country {
-        width: 220px;
-        height: 190px;
+        width: 300px;
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #country {
+        width: 150px;
+        height: 120px;
+    }
+    #header-img {
+        width: 300px;
+    }
+    .row {
+        margin-right: 0;
     }
 }
