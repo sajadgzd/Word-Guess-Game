@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hangman Game</title>
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -17,23 +18,23 @@
         <div class="row">
             <div class="col-md-12">Welcome to Your Hangman Game</div>
             <div class="col-md-12">Our Theme: Geography</div>
-            <div class="col-md-12"><img src="assets/images/world.jpg" alt="world map" style="height: 350px; width: 400px"></div>
+            <div class="col-md-12"><img src="assets/images/worldmap.jpg" alt="world map" id="header-img" style="height: 350px; width: 500px"></div>
 
         </div>
 
         <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
         <div class="row">
-            <div class="col-md-12">Correct Answer Goes Here
+            <div class="col-md-12">Press Any Key To Get Started! <br> Correct Answer Goes Here
                 <p id="answer"></p>
             </div>
-            <div class="col-6 col-md-4">Press Any Key To Get Started! <br> Wins:
+            <div class="col-6 col-md-6">Wins
                 <p id="wins"> </p> Losses
                 <p id="losses"> </p> Current Word
                 <p id="currentWord"> </p> Number of Guesses Remaining
                 <p id="remainingGuess"></p> Letters Already Guessed
                 <p id="alreadyGuessed"></p>
             </div>
-            <div class="col-3 col-md-4"><img src="assets/images/world2.jpg" id="country" alt="country" style="height: 200px; width: 200px;"></div>
+            <div class="col-3 col-md-6"><img src="assets/images/world2.jpg" id="country" alt="country"></div>
 
         </div>
     </div>
