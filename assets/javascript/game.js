@@ -14,6 +14,7 @@ var lossesText = document.getElementById("losses");
 var currentWordText = document.getElementById("currentWord");
 var remainingGuessText = document.getElementById("remainingGuess");
 var alreadyGuessedText = document.getElementById("alreadyGuessed");
+var correctAnswerText = document.getElementById("answer");
 
 var choices = ["IRAN", "USA", "BRAZIL", "TURKEY", "TAIWAN", "BURKINAFASO", "SWITZERLAND", "ROMANIA", "SPAIN"];
 
@@ -72,11 +73,15 @@ function roundFinish() {
     if (lettersInComputerChoice.toString() === BlankSuccess.toString()) {
         ++wins;
         winsText.innerHTML = wins;
+        correctAnswerText.innerHTML = computerChoice.toString();
         start();
+
     } else if (remainingGuess === 0) {
         ++losses;
         lossesText.innerHTML = losses;
+        correctAnswerText.innerHTML = computerChoice.toString();
         start();
+
     }
 }
 
@@ -85,8 +90,8 @@ start();
 document.onkeyup = function() {
 
     userInput = String.fromCharCode(event.keyCode).toUpperCase();
+
     checkletter(userInput);
 
     roundFinish();
-
 }
