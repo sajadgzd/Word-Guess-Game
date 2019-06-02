@@ -90,7 +90,6 @@ function roundFinish() {
             countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg")
                 // audio = new Audio('../Word-Guess-Game/assets/audio/U.S.A.mp3');
                 // audio.play();
-
             audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/U.S.A.mp3");
             correctAnswerText.appendChild(audioElement);
 
