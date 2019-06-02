@@ -1,2 +1,2 @@
 # Word-Guess-Game
-## JavaScript game which lets the user guess the word the computer chooses with a theme of Geogrophy. The user will be able to play the national anthem of each country and see the flag after each guess.
+## A JavaScript game which lets the user guess the word the computer chooses with a theme of Geogrophy. The user will be able to play the national anthem of each country and see the flag after each guess.
