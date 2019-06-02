@@ -4,6 +4,10 @@ var lettersInComputerChoice = [];
 var numBlanks = 0;
 var BlankSuccess = [];
 var alreadyGuessed = [];
+var audioElement = document.createElement("AUDIO");
+audioElement.setAttribute("controls", "controls");
+audioElement.setAttribute("class", "audio");
+
 
 var wins = 0;
 var losses = 0;
@@ -16,6 +20,8 @@ var remainingGuessText = document.getElementById("remainingGuess");
 var alreadyGuessedText = document.getElementById("alreadyGuessed");
 var correctAnswerText = document.getElementById("answer");
 var countryImage = document.getElementById("country");
+
+correctAnswerText.appendChild(audioElement);
 
 var choices = ["IRAN", "USA", "BRAZIL", "TURKEY", "TAIWAN", "BURKINAFASO", "SWITZERLAND", "ROMANIA", "SPAIN", "INDONESIA", "JAPAN", "KENYA", "GREECE", "TUNISIA", "MONGOLIA", "SENEGAL", "FINLAND"];
 
@@ -82,8 +88,12 @@ function roundFinish() {
         }
         if (computerChoice.toString() === "USA") {
             countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg")
-            audio = new Audio('../Word-Guess-Game/assets/audio/U.S.A.mp3');
-            audio.play();
+                // audio = new Audio('../Word-Guess-Game/assets/audio/U.S.A.mp3');
+                // audio.play();
+
+            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/U.S.A.mp3");
+            correctAnswerText.appendChild(audioElement);
+
         }
         if (computerChoice.toString() === "BRAZIL") {
             countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg")

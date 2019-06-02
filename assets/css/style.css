@@ -46,6 +46,20 @@ body {
     border-radius: 25px;
 }
 
+.audio {
+    display: block;
+    text-align: center;
+    width: 50%;
+    height: 35px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+p#answer {
+    margin-bottom: 0;
+}
+
 @media screen and (max-width: 990px) {
     #country {
         width: 300px;
