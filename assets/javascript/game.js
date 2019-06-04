@@ -78,196 +78,113 @@ function checkletter(userInput) {
     }
 }
 
+function setImageAndAudio() {
+    if (computerChoice.toString() === "IRAN") {
+        countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg")
+        audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Iran.mp3");
+        audioPosition.appendChild(audioElement);
+    }
+    if (computerChoice.toString() === "USA") {
+        countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg")
+            // audio = new Audio('../Word-Guess-Game/assets/audio/U.S.A.mp3');
+            // audio.play();
+        audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/U.S.A.mp3");
+        audioPosition.appendChild(audioElement);
+
+    }
+    if (computerChoice.toString() === "BRAZIL") {
+        countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg")
+        audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Brazil.mp3");
+        audioPosition.appendChild(audioElement);
+    }
+    if (computerChoice.toString() === "TURKEY") {
+        countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg")
+        audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/turkey.wav");
+        audioPosition.appendChild(audioElement);
+    }
+    if (computerChoice.toString() === "TAIWAN") {
+        countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/7/72/Flag_of_the_Republic_of_China.svg")
+        audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Taiwan.mp3");
+        audioPosition.appendChild(audioElement);
+    }
+    if (computerChoice.toString() === "BURKINAFASO") {
+        countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Burkina_Faso.svg")
+        audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/BurkinaFaso.mp3");
+        audioPosition.appendChild(audioElement);
+    }
+    if (computerChoice.toString() === "SWITZERLAND") {
+        countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg")
+        audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Switzerland.mp3");
+        audioPosition.appendChild(audioElement);
+    }
+    if (computerChoice.toString() === "ROMANIA") {
+        countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg")
+        audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Romania.mp3");
+        audioPosition.appendChild(audioElement);
+    }
+    if (computerChoice.toString() === "SPAIN") {
+        countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg")
+        audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Spain.mp3");
+        audioPosition.appendChild(audioElement);
+    }
+    if (computerChoice.toString() === "INDONESIA") {
+        countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg")
+        audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Indonesia.mp3");
+        audioPosition.appendChild(audioElement);
+    }
+    if (computerChoice.toString() === "JAPAN") {
+        countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg")
+        audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Japan.mp3");
+        audioPosition.appendChild(audioElement);
+    }
+    if (computerChoice.toString() === "KENYA") {
+        countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg")
+        audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Kenya.mp3");
+        audioPosition.appendChild(audioElement);
+    }
+    if (computerChoice.toString() === "GREECE") {
+        countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg")
+        audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Greece.mp3");
+        audioPosition.appendChild(audioElement);
+    }
+    if (computerChoice.toString() === "TUNISIA") {
+        countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Tunisia.svg")
+        audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Tunisia.mp3");
+        audioPosition.appendChild(audioElement);
+    }
+    if (computerChoice.toString() === "MONGOLIA") {
+        countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Mongolia.svg")
+        audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Mongolia.mp3");
+        audioPosition.appendChild(audioElement);
+    }
+    if (computerChoice.toString() === "SENEGAL") {
+        countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg")
+        audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Senegal.mp3");
+        audioPosition.appendChild(audioElement);
+    }
+    if (computerChoice.toString() === "FINLAND") {
+        countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg")
+        audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Finland.mp3");
+        audioPosition.appendChild(audioElement);
+    }
+
+}
+
 function roundFinish() {
     if (lettersInComputerChoice.toString() === BlankSuccess.toString()) {
         ++wins;
         winsText.innerHTML = wins;
         correctAnswerText.innerHTML = computerChoice.toString();
-        if (computerChoice.toString() === "IRAN") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Iran.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "USA") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg")
-                // audio = new Audio('../Word-Guess-Game/assets/audio/U.S.A.mp3');
-                // audio.play();
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/U.S.A.mp3");
-            audioPosition.appendChild(audioElement);
 
-        }
-        if (computerChoice.toString() === "BRAZIL") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Brazil.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "TURKEY") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/turkey.wav");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "TAIWAN") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/7/72/Flag_of_the_Republic_of_China.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Taiwan.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "BURKINAFASO") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Burkina_Faso.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/BurkinaFaso.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "SWITZERLAND") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Switzerland.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "ROMANIA") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Romania.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "SPAIN") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Spain.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "INDONESIA") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Indonesia.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "JAPAN") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Japan.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "KENYA") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Kenya.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "GREECE") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Greece.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "TUNISIA") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Tunisia.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Tunisia.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "MONGOLIA") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Mongolia.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Mongolia.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "SENEGAL") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Senegal.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "FINLAND") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Finland.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-
+        setImageAndAudio();
         start();
 
     } else if (remainingGuess === 0) {
         ++losses;
         lossesText.innerHTML = losses;
         correctAnswerText.innerHTML = computerChoice.toString();
-        if (computerChoice.toString() === "IRAN") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Iran.mp3");
-            audioPosition.appendChild(audioElement);
-        }
 
-        if (computerChoice.toString() === "USA") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/U.S.A.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "BRAZIL") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Brazil.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "TURKEY") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/turkey.wav");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "TAIWAN") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/7/72/Flag_of_the_Republic_of_China.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Taiwan.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "BURKINAFASO") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Burkina_Faso.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/BurkinaFaso.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "SWITZERLAND") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Switzerland.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "ROMANIA") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Romania.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "SPAIN") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Spain.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "INDONESIA") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Indonesia.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "JAPAN") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Japan.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "KENYA") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Kenya.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "GREECE") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Greece.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "TUNISIA") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Tunisia.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Tunisia.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "MONGOLIA") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Mongolia.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Mongolia.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "SENEGAL") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Senegal.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-        if (computerChoice.toString() === "FINLAND") {
-            countryImage.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg")
-            audioElement.setAttribute("src", "../Word-Guess-Game/assets/audio/Finland.mp3");
-            audioPosition.appendChild(audioElement);
-        }
-
-
-
-
+        setImageAndAudio();
         start();
 
     }
